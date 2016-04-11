@@ -2,9 +2,9 @@ require 'rails_helper'
 
 feature 'Editing cars' do
   scenario 'should edit a car' do
-    Car.create(make: 'Ford', model: 'Mustang', year: '1967', price: '2300')
+    car= Car.create(make: 'Ford', model: 'Mustang', year: '1967', price: '2300')
 
-    visit '/'
+    visit 'edit_car_path(car)'
 
     click_link 'Edit Car'
 
